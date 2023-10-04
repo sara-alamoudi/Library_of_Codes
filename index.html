@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>Page Loading Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Droid Arabic Kufi';
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #sec2 {
+            position: relative;
+            /* Set the #sec2 container to a relative position */
+            height: 100%;
+            background: #f1f1f1;
+        }
+
+        #sidebar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            background: #f1f1f1;
+            border: 1px solid black;
+            /* Add a border to the sidebar */
+        }
+
+
+        button {
+            margin-bottom: 10px;
+        }
+
+        #content {
+            margin-right: 200px;
+            /* Set the right margin to match the width of the sidebar */
+            height: 1000px;
+            border: 2px solid black;
+            /* Add a border to the frame */
+            padding-bottom: 200px;
+            margin-bottom: 200px;
+        }
+        #ulMain {
+            list-style-type: none;
+            margin-left: 2.5em;
+        }
+    </style>
+
+    <!-------------------------------main head------------------------>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <title></title>
+
+</head>
+
+<body>
+    <!------------------Main Body ------------------------------------->
+
+    <div class="container mt-5">
+
+
+        <div class="row rounded-1 align-content-center border border-3 border-dark border-opacity-50"
+            style="background-color: #ba915e; height: 100px;">
+            <p class="fw-bold h2" style="position: relative; right: 35%;">مكتبة الأكواد</p>
+        </div>
+        <p class="text-center text mt-3">
+            مكتبة الأكواد هي صفحة تحتوي على أكواد مختلفة باستخدام <strong>Bootstrap5</strong> ، لمساعدة مسؤولي التصميم
+            لصفحات الكليات والمراكز التابعة لجامعة الملك عبدالعزيز في إيجاد أكواد العناصر التي يحتاجونها في تصميم هذه
+            الصفحات. حيث أن أكواد هذه المكتبة تتوافق مع الهوية البصرية للجامعة.
+        </p>
+        <div class="container">
+            <br>
+            <div class="h2">قبل البدء</div>
+            <p>اتبع الخطوات التالية لتضمين مكاتب <strong>Bootstrap</strong> </p>
+
+            <ul id="ulMain">
+                <li class="mb-2 p-2" style="background-color:#ebebeb; border-radius: 5px;"><span><i
+                            class="bi bi-1-circle"></i></span><strong> أنشئ صفحة جديدة باسم
+                        <code>index.html</code></strong>
+                    في مسار مجلد المشروع باستخدام محلل الأكواد البرمجية الخاص بك.</li>
+                <li class="mb-2 p-2" style="background-color:#ebebeb; border-radius: 5px;"><span><i
+                            class="bi bi-2-circle"></i></span><strong> تأكد من تضمين وسم
+                        <code>&lt;meta name="viewport"&gt;</code></strong> للحصول على تصميم متجاوب مع الهواتف الذكية.
+                    <div class="container mt-4"
+                        style="display: flex; justify-content: space-between;background-color: black;">
+                        <h4></h4>
+                        <!-- Copy to clipboard -->
+                        <a tabindex="0" class="copy-code-button btn" role="button" id="button2" data-bs-toggle="popover"
+                            data-bs-trigger="focus" data-bs-content="تم النسخ !"
+                            onclick="copyCodeToClipboard('code2',this.id)">
+                            <i class='bi bi-clipboard2' style="font-size: 1.2rem;color: #ebebeb"></i>
+                        </a>
+                    </div>
+                    <pre><code class="overflow-y-auto" id="code2" style="height: 350px; direction: ltr; text-align: left;">
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Bootstrap demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+                </li>
+                <li class="mb-2 p-2" style="background-color:#ebebeb; border-radius: 5px;"><span><i
+                            class="bi bi-3-circle"></i></span><strong> ضمّن Bootstrap’s CSS and JS. </strong>ضّع وسم
+                    <code>&lt;link&gt;</code> في عنصر <code>&lt;head&gt;</code> لتضمين أكواد CSS وكذلك
+                    <code>&lt;script&gt;</code> قبل <code>&lt;body/&gt; </code>لتضمين أكواد JavaScript.
+                    <div class="container mt-4"
+                        style="display: flex; justify-content: space-between;background-color: black;">
+                        <h4></h4>
+                        <!-- Copy to clipboard -->
+                        <a tabindex="0" class="copy-code-button btn" role="button" id="button2" data-bs-toggle="popover"
+                            data-bs-trigger="focus" data-bs-content="تم النسخ !"
+                            onclick="copyCodeToClipboard('code2',this.id)">
+                            <i class='bi bi-clipboard2' style="font-size: 1.2rem;color: #ebebeb"></i>
+                        </a>
+                    </div>
+                    <pre><code class="overflow-y-auto" id="code2" style="height: 350px; direction: ltr; text-align: left;">
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;Bootstrap demo&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+                </li>
+                <li class="mb-2 p-2" style="background-color:#ebebeb; border-radius: 5px;"><span><i
+                            class="bi bi-4-circle"></i></span><strong> مرحبًا أيها العالم! </strong>افتح صفحة في مستعرض
+                    من
+                    اختيارك لمشاهدة صفحك التي قمت بإنشائها باستخدام Bootstrap.</li>
+            </ul>
+        </div>
+
+        <div class="h2 m-4">المحتوى</div>
+
+        <!------------------------Codes------------------->
+
+        <div id="sec2">
+            <div id="sidebar">
+                <button type="button" style="border: 2px solid black; background-color: grey;"
+                    class="list-group-item list-group-item-action"
+                    onclick="this.style.backgroundColor='#5e8557'; this.style.color='white';"
+                    onblur="this.style.backgroundColor='grey'; this.style.color='';"
+                    onfocus="this.style.backgroundColor='#5e8557'; this.style.color='grey'; loadPage('http://127.0.0.1:5500/NEWbuttons.html');">
+                    أزرار عرض المحتوى
+                </button>
+
+                <button type="button" style="border: 2px solid black; background-color: grey;"
+                    class="list-group-item list-group-item-action"
+                    onclick="this.style.backgroundColor='#5e8557'; this.style.color='white';"
+                    onblur="this.style.backgroundColor='grey'; this.style.color='';"
+                    onfocus="this.style.backgroundColor='#5e8557'; this.style.color='grey'; loadPage('http://127.0.0.1:5500/Newgrouping.html');">
+                    المجموعات
+                </button>
+
+                <button type="button" style="border: 2px solid black;background-color: grey;"
+                    class="list-group-item list-group-item-action"
+                    onclick="this.style.backgroundColor='#5e8557'; this.style.color='white';"
+                    onblur="this.style.backgroundColor='grey'; this.style.color='';"
+                    onfocus="this.style.backgroundColor='#5e8557'; this.style.color='grey'; loadPage('http://127.0.0.1:5500/contentdisplay.html');">عرض محتوى
+                </button>
+
+                <button type="button" style="border: 2px solid black;background-color: grey;"
+                    class="list-group-item list-group-item-action"
+                    onclick="this.style.backgroundColor='#5e8557'; this.style.color='white';"
+                    onblur="this.style.backgroundColor='grey'; this.style.color='';"
+                    onfocus="this.style.backgroundColor='#5e8557'; this.style.color='grey';loadPage('http://127.0.0.1:5500/navbar.html');">قائمة تنقل
+                </button>
+
+                <button type="button" style="border: 2px solid black;background-color: grey;"
+                    class="list-group-item list-group-item-action"
+                    onclick="this.style.backgroundColor='#5e8557'; this.style.color='white';"
+                    onblur="this.style.backgroundColor='grey'; this.style.color='';"
+                    onfocus="this.style.backgroundColor='#5e8557'; this.style.color='grey'; loadPage('http://127.0.0.1:5500/codeexamples.html');">أكواد جاهزة للاستخدام
+                </button>
+
+            </div>
+        </div>
+
+        <div id="content">
+            <iframe src="" width="100%" height="1000px" ></iframe>
+        </div>
+
+        <script>
+            function loadPage(url) {
+                document.querySelector('#content iframe').src = url;
+            }
+            function copyCodeToClipboard(codeId, buttonId) {
+                const codeBlock = document.getElementById(codeId);
+                const textarea = document.createElement("textarea");
+                const copyButton = document.getElementById(buttonId);
+                document.body.appendChild(textarea);
+                textarea.value = codeBlock.innerText;
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                copyButton.innerHTML = "<i class='bi bi-check' style='font-size: 1.2rem;color: #ebebeb;'></i>";
+                setTimeout(() => {
+                    copyButton.innerHTML = "<i class='bi bi-clipboard2' style='font-size: 1.2rem;color: #ebebeb;'></i>";
+                }, 1500);
+            }
+        </script>
+    </div>
+
+    </div>
+</body>
+
+</html>
